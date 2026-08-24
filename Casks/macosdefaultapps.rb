@@ -7,7 +7,7 @@ cask "macosdefaultapps" do
   desc "View and set default application associations on macOS"
   homepage "https://github.com/klabast/macOSDefaultApps"
 
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "macOSDefaultApps.app"
 
