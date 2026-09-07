@@ -11,11 +11,12 @@ class Mda < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "--product", "mda"
-    # the catalog ships in a swiftpm resource bundle that must sit next to the
-    # binary — without it every catalog-backed command traps at startup
+    # the catalog ships in a swiftpm resource bundle that Bundle.module looks
+    # for next to the running binary. a bin symlink resolves to the link path,
+    # not the target, so the bundle is missed — an exec script gets it right.
     libexec.install ".build/release/mda"
     libexec.install Dir[".build/release/*.bundle"]
-    bin.install_symlink libexec/"mda"
+    bin.write_exec_script libexec/"mda"
   end
 
   test do
