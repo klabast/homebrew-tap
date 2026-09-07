@@ -11,11 +11,17 @@ class Mda < Formula
 
   def install
     system "swift", "build", "--disable-sandbox", "-c", "release", "--product", "mda"
-    bin.install ".build/release/mda"
+    # the catalog ships in a swiftpm resource bundle that must sit next to the
+    # binary — without it every catalog-backed command traps at startup
+    libexec.install ".build/release/mda"
+    libexec.install Dir[".build/release/*.bundle"]
+    bin.install_symlink libexec/"mda"
   end
 
   test do
     assert_match "default application associations", shell_output("#{bin}/mda --help")
     assert_match "\t", shell_output("#{bin}/mda get txt")
+    # catalog-backed path: needs the resource bundle alongside the binary
+    assert_match "plain text", shell_output("#{bin}/mda dump")
   end
 end
