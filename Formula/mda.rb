@@ -1,8 +1,8 @@
 class Mda < Formula
   desc "View and set default application associations on macOS"
   homepage "https://github.com/klabast/macOSDefaultApps"
-  url "https://github.com/klabast/macOSDefaultApps/archive/refs/tags/v0.4.0.tar.gz"
-  sha256 "9bb341bf35b78b462b3b1d8017cd45fb012db82e99b5e12158d8e6d7be46ab1c"
+  url "https://github.com/klabast/macOSDefaultApps/archive/refs/tags/v0.5.0.tar.gz"
+  sha256 "102455b763bf09a9e04c9ebe6e01c284f04674f4187a1a0af8eb68c058ffee96"
   license "MIT"
   head "https://github.com/klabast/macOSDefaultApps.git", branch: "main"
 
