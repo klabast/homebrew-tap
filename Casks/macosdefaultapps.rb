@@ -1,6 +1,6 @@
 cask "macosdefaultapps" do
-  version "0.5.0"
-  sha256 "b5b6e4417af386c3d49ea5960a8c69791a9e9f7180e969e6de9e4d26d58d5cdc"
+  version "0.5.1"
+  sha256 "0be5aa52e783dea808f67a7cf5d9f896006ca8cf3862f9a790645e38badb37e5"
 
   url "https://github.com/klabast/macOSDefaultApps/releases/download/v#{version}/macOSDefaultApps-#{version}.zip"
   name "macOSDefaultApps"
