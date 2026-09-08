@@ -1,8 +1,8 @@
 class Mda < Formula
   desc "View and set default application associations on macOS"
   homepage "https://github.com/klabast/macOSDefaultApps"
-  url "https://github.com/klabast/macOSDefaultApps/releases/download/v0.6.1/mda-0.6.1-universal.tar.gz"
-  sha256 "855501ba583491c99779b45c1190788e96a724ba0ca135aac8d51bf6f824b11e"
+  url "https://github.com/klabast/macOSDefaultApps/releases/download/v0.7.0/mda-0.7.0-universal.tar.gz"
+  sha256 "88154afc050c1ee0f6dfef415d07bf0a8a2305f1d482889e10d8b61694ceedc1"
   license "MIT"
 
   depends_on macos: :sequoia
